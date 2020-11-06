@@ -1,0 +1,92 @@
+[
+    {
+        "qNumber": 1,
+        "question":"What is the correct way to type JavaScript code in an HTML file?",
+        "qOption1":"<java>",
+        "qOption2":"<script>",
+        "qOption3":"<javascript>",
+        "qOption4":"<js>",
+        "answer":2
+    },
+    {
+        "qNumber": 2,
+        "question":"How many bits are there in a byte?",
+        "qOption1":"8",
+        "qOption2":"2",
+        "qOption3":"1",
+        "qOption4":"4",
+        "answer":4
+    },
+    {
+        "qNumber": 3,
+        "question":"Which of the following is the command to create an angular project called Proj?",
+        "qOption1":"ng new Proj",
+        "qOption2":"ng -g -c Proj",
+        "qOption3":"angular new Proj",
+        "qOption4":"create new angular Proj",
+        "answer":1
+    },
+    {
+        "qNumber": 4,
+        "question":"What does .ts signify?",
+        "qOption1":"a TypeScript file",
+        "qOption2":"a TypeScript project",
+        "qOption3":"a TempScript file",
+        "qOption4":"a TempScript project",
+        "answer":1
+    },
+    {
+        "qNumber": 5,
+        "question":"How many states are there in the USA?",
+        "qOption1":"51",
+        "qOption2":"50",
+        "qOption3":"52",
+        "qOption4":"13",
+        "answer":2
+    },
+    {
+        "qNumber": 6,
+        "question":"What year did the Second World War Begin?",
+        "qOption1":"1918",
+        "qOption2":"1945",
+        "qOption3":"1939",
+        "qOption4":"1914",
+        "answer":3
+    },
+    {
+        "qNumber": 7,
+        "question":"How many stars does the Statue of Liberty have on her crown?",
+        "qOption1":"8",
+        "qOption2":"6",
+        "qOption3":"9",
+        "qOption4":"7",
+        "answer":4
+    },
+    {
+        "qNumber": 8,
+        "question":"What club won the 2019-2020 Premier League Title",
+        "qOption1":"Liverpool Football Club",
+        "qOption2":"Manchester City Football Club",
+        "qOption3":"Football Club Barcelona",
+        "qOption4":"Real Madrid Football Club",
+        "answer":1
+    },
+    {
+        "qNumber": 9,
+        "question":"What NHL team won the Stanley Cup in the 1994-95, 1999-00, and 2002-03 seasons?",
+        "qOption1":"Colorado Avalanche",
+        "qOption2":"Detroit Red Wings",
+        "qOption3":"New Jersey Devils",
+        "qOption4":"Anaheim Mighty Ducks",
+        "answer":3
+    },
+    {
+        "qNumber": 10,
+        "question":"How many World Series Championships do the New York Yankees Have?",
+        "qOption1":"29",
+        "qOption2":"26",
+        "qOption3":"27",
+        "qOption4":"28",
+        "answer":3
+    }
+]
