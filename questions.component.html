@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="questions.component.css" rel="stylesheet">
+</head>
+<body>
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">Quiz</h1>
+        <input class="btn btn-lg btn-secondary" type="button" (click)="loadQuestions()" value="Start Quiz"/>
+        <br/><br/>
+        <div>
+            <table border="1">
+                <tr>
+                    <th>Question Number</th>
+                    <th>Question</th>
+                    <th>Option 1</th>
+                    <th>Option 2</th>
+                    <th>Option 3</th>
+                    <th>Option 4</th>
+                </tr>
+                <tr *ngFor="let obj of qObject">
+                    <td>{{obj.qNumber}}</td>
+                    <td>{{obj.question}}</td>
+                    <td>{{obj.qOption1}}</td>
+                    <td>{{obj.qOption2}}</td>
+                    <td>{{obj.qOption3}}</td>
+                    <td>{{obj.qOption4}}</td>
+                    
+                </tr>
+        </table><br/><br/>
+                <div>
+                <h2>Question Sheet</h2>
+                    <form #userRef="ngForm" novalidate class="quiz-form">
+                        <div class="row">
+                                <div>
+                                    <label >Question 1</label><br/>
+                                    <label for="o1">Option 1 </label>
+                                    <input type="radio" id="1o1" name="q1" value="1" (change)="radioChangeHandler1($event)"><br/>
+                                    <label for="o2">Option 2 </label>
+                                    <input type="radio" id="1o2" name="q1" value="2" (change)="radioChangeHandler1($event)"><br/>
+                                    <label for="o3">Option 3 </label>
+                                    <input type="radio" id="1o3" name="q1" value="3" (change)="radioChangeHandler1($event)"><br/>
+                                    <label for="o4">Option 4 </label>
+                                    <input type="radio" id="1o4" name="q1" value="4" (change)="radioChangeHandler1($event)"><br/>
+                                </div>
+                            <div>
+                                <label>Question 2</label><br/>
+                                <label for="o1">Option 1 </label>
+                                <input type="radio" id="2o1" name="q2" value="1" (change)="radioChangeHandler2($event)"><br/>
+                                <label for="o2">Option 2 </label>
+                                <input type="radio" id="2o2" name="q2" value="2" (change)="radioChangeHandler2($event)"><br/>
+                                <label for="o3">Option 3 </label>
+                                <input type="radio" id="2o3" name="q2" value="3" (change)="radioChangeHandler2($event)"><br/>
+                                <label for="o4">Option 4 </label>
+                                <input type="radio" id="2o4" name="q2" value="4" (change)="radioChangeHandler2($event)"><br/>
+                            </div>
+                            <div>
+                                <label>Question 3</label><br/>
+                                <label for="o1">Option 1 </label>
+                                <input type="radio" id="3o1" name="q3" value="1" (change)="radioChangeHandler3($event)"><br/>
+                                <label for="o2">Option 2 </label>
+                                <input type="radio" id="3o2" name="q3" value="2" (change)="radioChangeHandler3($event)"><br/>
+                                <label for="o3">Option 3 </label>
+                                <input type="radio" id="3o3" name="q3" value="3" (change)="radioChangeHandler3($event)"><br/>
+                                <label for="o4">Option 4 </label>
+                                <input type="radio" id="3o4" name="q3" value="4" (change)="radioChangeHandler3($event)"><br/>
+                            </div>
+                            <div>
+                                <label>Question 4</label><br/>
+                                <label for="o1">Option 1 </label>
+                                <input type="radio" id="4o1" name="q4" value="1" (change)="radioChangeHandler4($event)"><br/>
+                                <label for="o2">Option 2 </label>
+                                <input type="radio" id="4o2" name="q4" value="2" (change)="radioChangeHandler4($event)"><br/>
+                                <label for="o3">Option 3 </label>
+                                <input type="radio" id="4o3" name="q4" value="3" (change)="radioChangeHandler4($event)"><br/>
+                                <label for="o4">Option 4 </label>
+                                <input type="radio" id="4o4" name="q4" value="4" (change)="radioChangeHandler4($event)"><br/>
+                            </div>
+                            <div >
+                                <label>Question 5</label><br/>
+                                <label for="o1">Option 1 </label>
+                                <input type="radio" id="5o1" name="q5" value="1" (change)="radioChangeHandler5($event)"><br/>
+                                <label for="o2">Option 2 </label>
+                                <input type="radio" id="5o2" name="q5" value="2" (change)="radioChangeHandler5($event)"><br/>
+                                <label for="o3">Option 3 </label>
+                                <input type="radio" id="5o3" name="q5" value="3" (change)="radioChangeHandler5($event)"><br/>
+                                <label for="o4">Option 4 </label>
+                                <input type="radio" id="5o4" name="q5" value="4" (change)="radioChangeHandler5($event)"><br/>
+                            </div>
+                        </div><br/>
+                        <div class="row">
+                            <div >
+                                <label>Question 6</label><br/>
+                                <label for="o1">Option 1 </label>
+                                <input type="radio" id="6o1" name="q6" value="1" (change)="radioChangeHandler6($event)"><br/>
+                                <label for="o2">Option 2 </label>
+                                <input type="radio" id="6o2" name="q6" value="2" (change)="radioChangeHandler6($event)"><br/>
+                                <label for="o3">Option 3 </label>
+                                <input type="radio" id="6o3" name="q6" value="3" (change)="radioChangeHandler6($event)"><br/>
+                                <label for="o4">Option 4 </label>
+                                <input type="radio" id="6o4" name="q6" value="4" (change)="radioChangeHandler6($event)"><br/>
+                            </div>
+                            <div>
+                                <label>Question 7</label><br/>
+                                <label for="o1">Option 1 </label>
+                                <input type="radio" id="7o1" name="q7" value="1" (change)="radioChangeHandler7($event)"><br/>
+                                <label for="o2">Option 2 </label>
+                                <input type="radio" id="7o2" name="q7" value="2" (change)="radioChangeHandler7($event)"><br/>
+                                <label for="o3">Option 3 </label>
+                                <input type="radio" id="7o3" name="q7" value="3" (change)="radioChangeHandler7($event)"><br/>
+                                <label for="o4">Option 4 </label>
+                                <input type="radio" id="7o4" name="q7" value="4" (change)="radioChangeHandler7($event)"><br/>
+                            </div>
+                            <div>
+                                <label>Question 8</label><br/>
+                                <label for="o1">Option 1 </label>
+                                <input type="radio" id="8o1" name="q8" value="1" (change)="radioChangeHandler8($event)"><br/>
+                                <label for="o2">Option 2 </label>
+                                <input type="radio" id="8o2" name="q8" value="2" (change)="radioChangeHandler8($event)"><br/>
+                                <label for="o3">Option 3 </label>
+                                <input type="radio" id="8o3" name="q8" value="3" (change)="radioChangeHandler8($event)"><br/>
+                                <label for="o4">Option 4 </label>
+                                <input type="radio" id="8o4" name="q8" value="4" (change)="radioChangeHandler8($event)"><br/>
+                            </div>
+                            <div>
+                                <label>Question 9</label><br/>
+                                <label for="o1">Option 1 </label>
+                                <input type="radio" id="9o1" name="q9" value="1" (change)="radioChangeHandler9($event)"><br/>
+                                <label for="o2">Option 2 </label>
+                                <input type="radio" id="9o2" name="q9" value="2" (change)="radioChangeHandler9($event)"><br/>
+                                <label for="o3">Option 3 </label>
+                                <input type="radio" id="9o3" name="q9" value="3" (change)="radioChangeHandler9($event)"><br/>
+                                <label for="o4">Option 4 </label>
+                                <input type="radio" id="9o4" name="q9" value="4" (change)="radioChangeHandler9($event)"><br/>
+                            </div>
+                            <div>
+                                <label>Question 10</label><br/>
+                                <label for="o1">Option 1  </label>
+                                <input type="radio" id="10o1" name="q10" value="1" (change)="radioChangeHandler10($event)"><br/>
+                                <label for="o2">Option 2 </label>
+                                <input type="radio" id="10o2" name="q10" value="2" (change)="radioChangeHandler10($event)"><br/>
+                                <label for="o3">Option 3 </label>
+                                <input type="radio" id="10o3" name="q10" value="3" (change)="radioChangeHandler10($event)"><br/>
+                                <label for="o4">Option 4 </label>
+                                <input type="radio" id="10o4" name="q10" value="4" (change)="radioChangeHandler10($event)"><br/>
+                            </div>
+                            <br/>
+                        </div>
+                            <input class="btn btn-lg btn-secondary" type="button" (click)="getGrade()" value="Submit"/>
+                    </form>
+                </div>
+            </div>
+        <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </footer>
+    </main>
+</body>
+</html>
+
+
